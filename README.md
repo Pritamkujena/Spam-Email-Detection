@@ -1,20 +1,28 @@
-# Spam-Detection
-#Text Classification with Naive Bayes (Spam Detection)
+# Text Classification in Spam Detection
 
-This project is an example of text classification for spam detection using the Multinomial Naive Bayes classifier. It's designed to classify SMS messages as "ham" or "spam."
 
-#Description
+This project implements a text classification task for spam detection using various classifiers: Naive Bayes, Decision Tree, and Random Forest. Here's a summary of what it does:
 
-Text classification is a common task in natural language processing and machine learning. In this project, we use the Multinomial Naive Bayes classifier to classify SMS messages as either "ham" (non-spam) or "spam." We employ the scikit-learn library for text vectorization and model training.
+Data Loading and Exploration:
 
-#Getting Started
+Loads a dataset containing SMS messages labeled as spam or ham (not spam).
+Prints the first few rows of the dataset to inspect its structure.
+Data Preprocessing and Splitting:
 
-Prerequisites
+Splits the data into training and test sets using the train_test_split function from scikit-learn.
+Feature Extraction:
 
-Before running the code, make sure you have the following prerequisites installed:
+Uses a count vectorizer to convert text data into numerical features, specifically counts of word occurrences.
+Model Training:
 
-Python,
-scikit-learn,
-pandas,
-matplotlib,
-seaborn.
+Trains three different classifiers: Naive Bayes, Decision Tree, and Random Forest, using the training data transformed by the count vectorizer.
+Model Evaluation:
+
+Makes predictions on the test data using each classifier.
+Calculates the accuracy of each classifier using the accuracy_score function from scikit-learn.
+Displays the accuracy of each classifier.
+Confusion Matrix Visualization:
+
+Generates confusion matrices for each classifier using the confusion_matrix function from scikit-learn.
+Visualizes the confusion matrices using heatmap plots with seaborn and matplotlib.
+Overall, this code provides a comparison of different classifiers for the task of spam detection and visualizes their performance using confusion matrices.
